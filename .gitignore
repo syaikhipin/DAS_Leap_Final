@@ -1,0 +1,17 @@
+# Final deliverable PDFs (submitted separately, not needed in the repo)
+report_diabetes.pdf
+*.pdf
+
+# Keep the course briefs and data out of a public repo? No - data is public,
+# briefs are course materials. Excluding all PDFs covers them.
+
+# Transient output
+output_old_cloud.txt
+.Rhistory
+.RData
+.Rproj.user/
+
+# Scenario 2 materials (unused - this project is Scenario 1)
+2b_Scenario1_Diabetes_Starter.R
+3b_Scenario2_Student_Performance_Starter.R
+student-mat.csv

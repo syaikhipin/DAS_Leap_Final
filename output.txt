@@ -1,0 +1,166 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] 442  11
+ [1] "age"         "sex"         "bmi"         "bp"          "s1"         
+ [6] "s2"          "s3"          "s4"          "s5"          "s6"         
+[11] "progression"
+'data.frame':	442 obs. of  11 variables:
+ $ age        : num  59 48 72 24 50 23 36 66 60 29 ...
+ $ sex        : Factor w/ 2 levels "1","2": 2 1 2 1 1 1 2 2 2 1 ...
+ $ bmi        : num  32.1 21.6 30.5 25.3 23 22.6 22 26.2 32.1 30 ...
+ $ bp         : num  101 87 93 84 101 89 90 114 83 85 ...
+ $ s1         : num  157 183 156 198 192 139 160 255 179 180 ...
+ $ s2         : num  93.2 103.2 93.6 131.4 125.4 ...
+ $ s3         : num  38 70 41 40 52 61 50 56 42 43 ...
+ $ s4         : num  4 3 4 5 4 2 3 4.55 4 4 ...
+ $ s5         : num  4.86 3.89 4.67 4.89 4.29 ...
+ $ s6         : num  87 69 85 89 80 68 82 92 94 88 ...
+ $ progression: num  151 75 141 206 135 97 138 63 110 310 ...
+        age         sex         bmi          bp          s1          s2 
+          0           0           0           0           0           0 
+         s3          s4          s5          s6 progression 
+          0           0           0           0           0 
+[1] 0
+[1] 0
+      age       sex          bmi             bp              s1     
+ Min.   :19.0   1:235   Min.   :18.0   Min.   : 62.0   Min.   : 97  
+ 1st Qu.:38.2   2:207   1st Qu.:23.2   1st Qu.: 84.0   1st Qu.:164  
+ Median :50.0           Median :25.7   Median : 93.0   Median :186  
+ Mean   :48.5           Mean   :26.4   Mean   : 94.6   Mean   :189  
+ 3rd Qu.:59.0           3rd Qu.:29.3   3rd Qu.:105.0   3rd Qu.:210  
+ Max.   :79.0           Max.   :42.2   Max.   :133.0   Max.   :301  
+       s2              s3             s4             s5             s6       
+ Min.   : 41.6   Min.   :22.0   Min.   :2.00   Min.   :3.26   Min.   : 58.0  
+ 1st Qu.: 96.0   1st Qu.:40.2   1st Qu.:3.00   1st Qu.:4.28   1st Qu.: 83.2  
+ Median :113.0   Median :48.0   Median :4.00   Median :4.62   Median : 91.0  
+ Mean   :115.4   Mean   :49.8   Mean   :4.07   Mean   :4.64   Mean   : 91.3  
+ 3rd Qu.:134.5   3rd Qu.:57.8   3rd Qu.:5.00   3rd Qu.:5.00   3rd Qu.: 98.0  
+ Max.   :242.4   Max.   :99.0   Max.   :9.09   Max.   :6.11   Max.   :124.0  
+  progression 
+ Min.   : 25  
+ 1st Qu.: 87  
+ Median :140  
+ Mean   :152  
+ 3rd Qu.:212  
+ Max.   :346  
+     n   mean median     sd    min q1.25% q3.75%    max    iqr 
+442.00 152.13 140.50  77.09  25.00  87.00 211.50 346.00 124.50 
+      n    mean  median      sd     min  q1.25%  q3.75%     max     iqr 
+442.000  26.376  25.700   4.418  18.000  23.200  29.275  42.200   6.075 
+     n   mean median     sd    min q1.25% q3.75%    max    iqr 
+442.00  48.52  50.00  13.11  19.00  38.25  59.00  79.00  20.75 
+              age   bmi    bp   s1    s2    s3    s4    s5    s6 progression
+age          1.00  0.19  0.34 0.26  0.22 -0.08  0.20  0.27  0.30        0.19
+bmi          0.19  1.00  0.40 0.25  0.26 -0.37  0.41  0.45  0.39        0.59
+bp           0.34  0.40  1.00 0.24  0.19 -0.18  0.26  0.39  0.39        0.44
+s1           0.26  0.25  0.24 1.00  0.90  0.05  0.54  0.52  0.33        0.21
+s2           0.22  0.26  0.19 0.90  1.00 -0.20  0.66  0.32  0.29        0.17
+s3          -0.08 -0.37 -0.18 0.05 -0.20  1.00 -0.74 -0.40 -0.27       -0.39
+s4           0.20  0.41  0.26 0.54  0.66 -0.74  1.00  0.62  0.42        0.43
+s5           0.27  0.45  0.39 0.52  0.32 -0.40  0.62  1.00  0.46        0.57
+s6           0.30  0.39  0.39 0.33  0.29 -0.27  0.42  0.46  1.00        0.38
+progression  0.19  0.59  0.44 0.21  0.17 -0.39  0.43  0.57  0.38        1.00
+progression         bmi          s5          bp          s4          s6 
+     1.0000      0.5865      0.5659      0.4415      0.4305      0.3825 
+         s1         age          s2          s3 
+     0.2120      0.1879      0.1741     -0.3948 
+pdf 
+  2 
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+
+Call:
+lm(formula = progression ~ bmi, data = diabetes)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-164.92  -43.57   -8.65   46.34  154.88 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -117.773     18.019   -6.54  1.8e-10 ***
+bmi           10.233      0.674   15.19  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 62.5 on 440 degrees of freedom
+Multiple R-squared:  0.344,	Adjusted R-squared:  0.342 
+F-statistic:  231 on 1 and 440 DF,  p-value: <2e-16
+
+# A tibble: 2 × 7
+  term        estimate std.error statistic  p.value conf.low conf.high
+  <chr>          <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
+1 (Intercept)   -118.     18.0       -6.54 1.75e-10  -153.       -82.4
+2 bmi             10.2     0.674     15.2  3.47e-42     8.91      11.6
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
+      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>  <dbl> <dbl> <dbl>
+1     0.344         0.342  62.5      231. 3.47e-42     1 -2454. 4914. 4926.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+(Intercept)         bmi 
+    -117.77       10.23 
+
+Call:
+lm(formula = progression ~ bmi + bp + s5, data = diabetes)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-140.23  -40.64   -2.19   38.27  139.80 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -334.881     25.878  -12.94  < 2e-16 ***
+bmi            6.500      0.697    9.32  < 2e-16 ***
+bp             0.903      0.217    4.17  3.7e-05 ***
+s5            49.577      5.890    8.42  5.6e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 55.8 on 438 degrees of freedom
+Multiple R-squared:  0.48,	Adjusted R-squared:  0.477 
+F-statistic:  135 on 3 and 438 DF,  p-value: <2e-16
+
+# A tibble: 4 × 7
+  term        estimate std.error statistic  p.value conf.low conf.high
+  <chr>          <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
+1 (Intercept) -335.       25.9      -12.9  1.16e-32 -386.      -284.  
+2 bmi            6.50      0.697      9.32 5.55e-19    5.13       7.87
+3 bp             0.903     0.217      4.17 3.74e- 5    0.477      1.33
+4 s5            49.6       5.89       8.42 5.56e-16   38.0       61.2 
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC
+      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>  <dbl> <dbl> <dbl>
+1     0.480         0.477  55.8      135. 7.16e-62     3 -2403. 4815. 4836.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+# A tibble: 2 × 4
+  model                   r.squared adj.r.squared sigma
+  <chr>                       <dbl>         <dbl> <dbl>
+1 Simple: BMI                 0.344         0.342  62.5
+2 Multiple: BMI + BP + S5     0.480         0.477  55.8
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+`geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+  bmi    bp    s5 
+1.345 1.274 1.342 
+# A tibble: 4 × 7
+  term        estimate std.error statistic  p.value conf.low conf.high
+  <chr>          <dbl>     <dbl>     <dbl>    <dbl>    <dbl>     <dbl>
+1 (Intercept) -335.       25.9      -12.9  1.16e-32 -386.      -284.  
+2 bmi            6.50      0.697      9.32 5.55e-19    5.13       7.87
+3 bp             0.903     0.217      4.17 3.74e- 5    0.477      1.33
+4 s5            49.6       5.89       8.42 5.56e-16   38.0       61.2 
+                2.5 %   97.5 %
+(Intercept) -385.7426 -284.020
+bmi            5.1300    7.870
+bp             0.4769    1.329
+s5            38.0002   61.154
